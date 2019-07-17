@@ -47,7 +47,11 @@
 
 def bubble_sort(arr):
     
-    # Iterates the array using 2 for loops
+    """
+        An implementation of a Bubble Sort algorithm using 2 for loops.
+        The outer loop makes the correct number of passes through the array.
+        The inner loop runs the comparison of current element to the comparison element for every element in the array. 
+    """
     
     for j in range(len(arr)):                           # Traverse through all elements in the array
         

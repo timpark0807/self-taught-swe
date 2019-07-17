@@ -25,10 +25,9 @@ def binary_search(test_list, answer):
         if guess < answer:
             low = guess
 
-        
     # Once guess == answer, the while loop will break
     print('answer is:', guess)
 
+binary_search(range(0,100), 10)
 
-
-binary_search(range(0,1000), 88)
+    
