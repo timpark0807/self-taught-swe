@@ -24,21 +24,27 @@ We use the law of addition when operations are executed in sequence.
 ```
 Big O of a Sequence = Time Complexity of Operation 1 + Time Complexity of Operation 2
 ```
+An example function containing operation f and operation g is defined below.
+
 We could describe the execution of example(n) as "do operation f and then do operation g." 
 ```
 def example(n):
     f(n)
     g(n)
 ```
-The big O of example(n) would look like...
+According to the law of addition, the big O of example(n) would look like...
 ```
-O(example(n)) = O(f(n )) + O(g(n))
+O(example(n)) = O(f(n)) + O(g(n))
 ```
-Using the law of addition, we can modify the statement above to the statement below...
+We can further modify the statement above, to the statement below...
 ```
-O(f(n)) + O(g(n))  =  O( f(n) + g(n) )
+O(example(n))  = O(f(n)) + O(g(n))  =  O( f(n) + g(n) )
 ```
-If both f(n) and g(n) require O(n) time, then the big-O of this sequence is O(n + n) = O(2n), which is simplified to O(n) after we drop all constants. 
+If both f(n) and g(n) require O(n) time, then plugging it in results in...
+```
+O(example(n))  = O(n) + O(n)  =  O( n + n ) = O(2n)
+```
+This is simplified to O(n) after we drop all constants. 
 
 ### Law of Multiplication
 Do operation A, X times
