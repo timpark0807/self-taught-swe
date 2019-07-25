@@ -21,25 +21,22 @@ In order to determine the complexity class of executing a function, we must be a
 
 ### Law of Addition 
 We use the law of addition when operations are executed in sequence.
-
-The Big O of a sequence that executes operation 1 and operation 2, is the sum of operation 1's time complexity and operation 2's time complexity. 
-
-We calculate this by bringing the complexity classes of each operation inside the sequences O(...)
-
+```
+Big O of a Sequence = Time Complexity of Operation 1 + Time Complexity of Operation 2
+```
+We could describe the execution of example(n) as "do operation f and then do operation g." 
 ```
 def example(n):
     f(n)
     g(n)
 ```
-We could describe the execution of example(n) as "do operation f and then do operation g." 
-
 The big O of example(n) would look like...
 ```
-O( example(n) ) = O( f(n ) ) + O( g(n) )
+O(example(n)) = O(f(n )) + O(g(n))
 ```
 Using the law of addition, we can modify the statement above to the statement below...
 ```
-O( f(n ) ) + O( g(n) )  =  O( f(n) + g(n) )
+O(f(n)) + O(g(n))  =  O( f(n) + g(n) )
 ```
 If both f(n) and g(n) require O(n) time, then the big-O of this sequence is O(n + n) = O(2n), which is simplified to O(n) after we drop all constants. 
 
