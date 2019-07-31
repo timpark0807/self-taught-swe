@@ -21,9 +21,28 @@ Cons:
 
 
 ## Operations
+When implementing a Stack using the linked list, we perform all push and pop operations on the head node. 
+The examples below will reflect operations for a Linked List Stack. 
+
 - pop(): remove the top item from the stack
+```
+def pop():
+    value = self.head
+    self.head = self.head.next
+    return value 
+```
 - push(item): add an item to the top of the stack
+```
+def push(data):
+    new_node = Node(data)
+    new_node.next = self.head
+    self.head = new_node 
+```
 - peek(): return the top of the stack
+```
+def peek():
+    return self.head
+```
 - isEmpty(): returns true if stack is empty
 
 ## Big O:
