@@ -41,21 +41,10 @@ class Queue:
         return self.head
 
 q = Queue()
-print(q.length())
 q.enQueue('1')
-print(q.length())
-
 q.enQueue('2')
-print(q.length())
-
 q.enQueue('3')
-print(q.length())
-
 q.deQueue()
-print(q.peek())
-
 q.deQueue()
-print(q.peek())
 q.deQueue()
-print(q.peek())
 q.deQueue()
