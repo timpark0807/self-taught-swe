@@ -1,83 +1,101 @@
 # So You Want To Be a Software Engineer? (with Python)
-From programming noob to software engineer.
+From Programming Noob to Software Engineer.
 
 ## Syllabus
 - Introduction
-- General Concepts
+- Important Concepts
 - Data Structures
 - Algorithms
-- Courses 
-- Books
+- Roadmap 
+- Resources
 
 ## Introduction
-This guide is the result hundreds of questions searched on reddit, youtube, and stackoverflow on self-taught programming.
-I began noticing trends in user responses across these platforms on things like best courses, best books, best practices, and important concepts.
-I compiled these findings into this repository as I progressed in my software engineering journey. 
-
-Note there are plenty of online guides on how to do so, but creating my own respoitory gave me the ability to track my personal progress.
-This repository is designed to guide myself from programming noob to software developer. 
-I have listed courses I have personally completed and books that I have read. 
+This project is the result of thousands of Google searches on self-taught programming.
+I began noting trends on subjects ranging from best courses and books, to must know concepts and important practices.
+I compiled my findings into this repository in order to track personal progress and showcase skillset to potential employers.
+All concepts, courses, and books listed in this README have been personally learned/completed/read.
 
 ## Concepts
-- [x] Object Oriented Programming
-- [x] Git 
-- [x] Debugging
-- [x] Testing
-- [x] Web Framework (Model/View/Controller)
-
-## Data Structures
-
-## Algorithms
-- [ ] Big O
+- Object Oriented Programming
+- Git 
+- Debugging
+- Testing
+- Web Framework (Model/View/Controller)
+- Big O
 	*A Gentle Introduction to Algorithm Complexity Analysis
 	* http://discrete.gr/complexity/
 
-Step 1. 
+## Data Structures
+1. Linear 
+    - Arrays
+    - Linked List
+    - Stacks
+    - Queues
+
+2. Non Linear
+    - Trees
+    - Graphs 
+
+## Algorithms
+Leetcode.com 
+
+## Knowledge Road Map
+__Step 1.__
+Alrgorithmic Analysis
 - Big O
 
-Step 1:
-Basic Sorting Algorithm
-	- Bubble Sort
-	- Insertion Sort
-	- Selection Sort
+__Step 2.__
+Basic Sorting and Searching Algorithm
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
+- Linear Search
+- Binary Search
 
-Searching Algorithm
-	- Linear Search
-	- Binary Search
-
-Step 2:
-- Stack
-- Queue
+__Step 3.__
+Linear Data Structures
+- Array
 - Single Linked List
 - Double Linked List
+- Stack
+- Queue
 
-Step 3: 
-Divide and Conquer (Merge Sort, Quick Sort, Binary Search)
-Greedy Method
-Dynamic Programming
+__Step 4.__
+Divide and Conquer Sorting
+- Merge Sort
+- Quick Sort
+- Binary Search
 
-Step 4:
-Binary Tree
-Binary Search Tree 
+__Step 5.__
+- Binary Tree
+- Binary Search Tree 
 	- Height of a Tree
 	- Tree Traversal
 	- BFS/DFS 
 
 
-## Courses
+Greedy Method
+Dynamic Programming
+
+
+## Resources
+### Courses
 - MIT 6.00.1 - Introduction to Computer Science
 - MIT 6.00.6 - Introduction to Algorithms
 
-## Books
+### Books
 - Think Python 
 - Grokking Algorithms
 - Data Structures & Algorithms in Python
+- Cracking the Coding Interview
 - The Slight Edge by Jeff Olsen
 - Mindset by Carol Dweck
 
-## Misc.
+### Resources
 - pythontutor.com
 - reddit.com/r/learnpython
 - reddit.com/r/learnprogramming
 - reddit.com/r/cscareerquestions
+- youtube.com/sentdex
+- youtube.com/coreyschafer
 - youtube.com/jomatech
