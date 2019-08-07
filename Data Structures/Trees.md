@@ -1,14 +1,24 @@
 # Trees
 A tree is a data structure composed of nodes.
+- Stores elements heirarchically 
 - Each tree has a root node
 - The root node has zero or more child nodes
 - Each child node has zero or more child nodes, and so on. 
+- A node with no children are leaves
+
+## Heirarchical
+Non-Linear data structure withl Above and Below relationships. 
 
 ## Leaf
 A node is called a 'leaf' if it has no children.
 
 ## Binary Tree
 A binary tree is a tree in which each node has up to two children. 
+
+Each Node contains:
+1. Data
+2. Pointer to left child
+3. Pointer to right child
 
 ## Binary Search Tree
 A binary search tree is a tree where every nodes left descendents are less than or equal to the current node and every nodes right descendents are greater than or equal to the current node.
@@ -27,9 +37,13 @@ A binary tree in which every node has either zero or children. No nodes have onl
 A binary tree that is both complete and full. All leaf nodes will be at same level and this level has the maximum number of nodes. 
 
 ## Traversal
+__Depth First Traversal__
 1. In-Order
+    * Left-Root-Right
 2. Pre-Order
+    * Root-Left-Right
 3. Post-Order
+    * Left-Right-Root
 
 
 
