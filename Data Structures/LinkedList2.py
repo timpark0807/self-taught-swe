@@ -45,6 +45,20 @@ class LinkedList:
         return self.head
 
 
+    def reverse(self):
+        p = self.head
+        q = p.next
+        p.next = None
+        q.next = p
+        while q is not None:
+            q.next = p
+            p = q
+            q = q.next
+
+
+
+        
+
 head = Node('10')
 node1 = Node('14')
 node2 = Node('17')
@@ -58,4 +72,6 @@ print(llist.traversal())
 llist.append('11')
 print(llist.traversal())
 llist.new_head('25')
+print(llist.traversal())
+llist.reverse()
 print(llist.traversal())

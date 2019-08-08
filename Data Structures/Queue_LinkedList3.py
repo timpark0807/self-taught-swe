@@ -2,33 +2,48 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-        
+ 
 class Queue:
-    def __init__(self, head):
-        self.head = head
-        self.tail = head
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.size = 0
 
+    def is_empty(self):
+        return self.size == 0
+    
     def enqueue(self, data):
-        new_node = Node(data)
-        self.tail.next = new_node
-        self.tail = new_node
+        if self.is_empty():
+            self.head = Node(data)
+            self.tail = self.head
+            self.size += 1 
+        else:
+            new_node = Node(data)
+            self.tail.next = new_node
+            self.tail = new_node
+            self.size += 1 
 
     def dequeue(self):
-        value = self.head.data
-        self.head = self.head.next
-        return value
-    
+        if self.is_empty():
+            return print('Queue is empty!')
+        else:
+            value = self.head.data
+            self.head = self.head.next
+            self.size -= 1
+            return value
+
     def peek(self):
-        return self.head.data
+        if self.is_empty():
+            return 'No data'
+        else:
+            return self.head.data
     
-head = Node('1')
-s = Queue(head)
-print(s.peek())
+
+s = Queue()
 s.enqueue('2')
-s.dequeue()
 print(s.peek())
-
-s.enqueue('3')
+s.dequeue()
+s.enqueue('4')
+s.dequeue()
 s.dequeue()
 
-print(s.peek())

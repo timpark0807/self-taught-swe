@@ -15,9 +15,10 @@ An algorithm is a set of instructions to find the solution to a problem.
 - Focus on only the largest growing term
 - Example: O(2n^2 + 100n) is reduced to O(n^2) because as n grows larger, 100n becomes less and less important. 
 
-## Multiply versus Adding Run time
-We will need to combine complexity class information about simple operations into complexity class information about complex operations (composed from simple operations).
-In order to determine the complexity class of executing a function, we must be able to analyze all operations/statements contained in the function. 
+## Calculating Complexity 
+We will combine complexity class information about simple operations, into complexity class information about complex operations (composed from simple operations).
+
+Thus, in order to determine the complexity class of executing a function, we must be able to analyze all operations/statements contained in the function. 
 
 ### Law of Addition 
 We use the law of addition when operations are executed in sequence.
@@ -25,30 +26,68 @@ We use the law of addition when operations are executed in sequence.
 Big O of a Sequence = Time Complexity of Operation 1 + Time Complexity of Operation 2
 ```
 An example function containing operation f and operation g is defined below.
-
-We could describe the execution of example(n) as "do operation f and then do operation g." 
 ```
 def example(n):
-    f(n)
-    g(n)
+    f()
+    g()
 ```
-According to the law of addition, the big O of example(n) would look like...
+We could describe the execution of example(n) as "do operation f and then do operation g." 
+
+According to the Law of Addition, the big O of example(n) would look like...
 ```
-O(example(n)) = O(f(n)) + O(g(n))
+O(example(n)) = O(f()) + O(g())
 ```
-We can further modify the statement above, to the statement below...
+We can use the Law of Addition to further modify the statement above to below...
 ```
-O(example(n))  = O(f(n)) + O(g(n))  =  O( f(n) + g(n) )
+O(example(n))  = O(f()) + O(g())  =  O( f() + g() )
 ```
-If both f(n) and g(n) require O(n) time, then plugging it in results in...
+If both f() and g() require O(n) time, then plugging in O(n) time results in...
 ```
 O(example(n))  = O(n) + O(n)  =  O( n + n ) = O(2n)
 ```
-This is simplified to O(n) after we drop all constants. 
+This is finally simplified to ```O(n)``` after we drop all constants. 
+
+The runtime of our example function is ```O(n)```.
 
 ### Law of Multiplication
-Do operation A, X times
-X * (time complexity of operation A)
+```
+O(f(n)) * O(g(n)) = O( f(n) * g(n) )
+```
+We use the Law of Multiplication when we repeat an operation X, Y amount of times.
+```
+(time complexity of operation X) * Y amount of repeats
+```
+If we repeat an O(f(n)) process O(n) times, the resulting complexity is 
+```
+O(f(n)) * O(n) = O( f(n)*n ) 
+```
+Another example function is defined below.
+```
+def example(n):
+    for i in range(n):
+        f()
+```
+We can describe the execution of example(n), "do f(), n times".
+```
+O(f(n)) * O(n) = O( f(n)*n ) 
+```
+If O(f(n)) is n, and we run it n times,
+```
+O(n) * O(n) = O( n*n ) 
+```
+O(n^2)
+
+### Summary
+Compound statements are analyzed by composing complexity classes of their constituent statements.
+
+For sequentials statements (such as if, else), the complexity classes are added.
+
+For repeating statements (such as loops), the complexity classes are multiplied. 
+
+
+
+
+
 
 ## Common Time Complexities
 - O(1) = Constant 

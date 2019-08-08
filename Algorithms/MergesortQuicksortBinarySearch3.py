@@ -54,9 +54,6 @@ def binarysearch(arr, low, high, x):
     if arr[mid] > x:
         return binarysearch(arr, low, mid-1, x)
 
-    
-
-
 arr = [0, 4, 3, 5, 2, 1]
 ms = mergesort(arr)
 qs = quicksort(arr, 0, len(arr) - 1)

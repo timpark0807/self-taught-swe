@@ -45,7 +45,7 @@ llist.head = Node('Mon')
 ```
 second = Node('Tue')
 third = Node('Wed')
-fourth = Node('Thur'
+fourth = Node('Thur')
 
 llist.head.next = second
 second.next = third 

@@ -18,7 +18,7 @@ The stop value represents the first value that is NOT in the selected slice.
 - Leaving the start value empty will slice from the beginning to the stop value - 1.
 - Leaving both stop and start values empty will return a copy of the entire object
 
-## A slicing example
+## An Example
 Imagine we define a variable 'example' to be equal to the string 'PYTHON'
 
 ```
@@ -52,6 +52,7 @@ The index and slicing positions are depicted below.
 0   1   2   3   4   5   6    <------- Slicing Positions 
 ```
 Notice that slicing positions point in between characters while index positions point to the actual value.
+
 
 Finally, slicing will not modify the original object. Slicing will return a new object. 
 

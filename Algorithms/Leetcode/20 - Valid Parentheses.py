@@ -10,7 +10,8 @@ Note that an empty string is also considered valid.
 
 
 class Solution:
-    def isValid(self, s: str) -> bool:
+    
+    def isValid(self, s):
         stack = Stack()
         for index in s:
             if index in '({[':

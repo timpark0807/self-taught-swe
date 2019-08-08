@@ -15,7 +15,9 @@ class Stack:
     def is_empty(self):
         return items == []
 
+
 def is_reverse(string):
+    
     s = Stack()
     for index in string:
         if index in '({[':
