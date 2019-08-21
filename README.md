@@ -11,9 +11,9 @@ From Programming Noob to Software Engineer.
 
 ## Introduction
 This project is the result of thousands of Google searches on self-taught programming.
-I began noting trends on subjects ranging from best courses and books, to must know concepts and important practices.
+I began noticing trends on topics ranging from best courses and books, to must know concepts and important practices.
 I compiled my findings into this repository in order to track personal progress and showcase skillset to potential employers.
-All concepts, courses, and books listed in this README have been personally learned/completed/read.
+All concepts, courses, and books listed in this README have been personally learned, completed, or read.
 
 ## Concepts
 - Object Oriented Programming
@@ -28,11 +28,12 @@ All concepts, courses, and books listed in this README have been personally lear
 ## Data Structures
 1. Linear 
     - Arrays
-    - Linked List
+    - Linked Lists
     - Stacks
     - Queues
 
 2. Non Linear
+    - Heaps
     - Trees
     - Graphs 
 
@@ -67,6 +68,8 @@ Divide and Conquer Sorting
 - Binary Search
 
 __Step 5.__
+Non Linear Data Structure
+- Heaps
 - Binary Tree
 - Binary Search Tree 
 	- Height of a Tree
