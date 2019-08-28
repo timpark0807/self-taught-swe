@@ -14,13 +14,24 @@ class Heap:
 
     def bubble_up(self, i):
         while i//2 >= 1:
-            if self.heap[i] < self.heap[i//2]:
-                self.swap(i, i//2)
+            if self.heap[i] < self.heap[i//2]:      # If child node is less than parent node
+                self.swap(i, i//2)                  # Swap child and parent node 
             i = i // 2
             
     def swap(self, i, j):
         return self.heap[i], self.heap[j] == self.heap[j], self.heap[i]
-         
+
+    def pop(self):
+        value = self.heap[1]
+        self.bubble_down(self.heap[1])
+        return value
+
+    def bubble_down(self):
+        self.swap(1, self.size)
+        self.heap.pop()
+        
+        return 
+
 
 heap = Heap()
 heap.insert(10)
