@@ -2,10 +2,12 @@ class Node:
     
     def __init__(self, data):
         self.data = data
+        self.size = 1
         self.left = None
         self.right = None
 
     def insert(self, value):
+        self.size += 1
         if value < self.data:
             if self.left is None:
                 self.left = Node(value)
@@ -17,7 +19,7 @@ class Node:
             else:
                 return self.right.insert(value)
         elif value == self.data:
-            return False
+            return False        
 
     def find(self, value):
         if value == self.data:
@@ -68,7 +70,7 @@ class Node:
             /     \
            4      13
           / \    /   \ 
-         1   5  11  15
+         1   5       15
 
 """
 
@@ -76,8 +78,6 @@ root = Node(10)
 root.insert(4)
 root.insert(1)
 root.insert(5)
-root.insert(11)
 root.insert(13)
 root.insert(15)
-print(root.find(4))
-root.inorder()
+print(root.size)

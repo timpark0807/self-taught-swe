@@ -71,8 +71,8 @@ root.preorder()
 #          6    15
 #         / \
 #        5   9
-#           /
-#          7
+#       /   /
+#      4   7
 print('root data is', root.data)
 print('left child is', root.left)
 print('right child is', root.right)
