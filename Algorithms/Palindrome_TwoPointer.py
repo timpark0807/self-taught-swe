@@ -1,7 +1,7 @@
 def palindrome(s):
     start, end = 0, len(s)-1
 
-    while start < end:
+    while start <= end:
         if s[start] != s[end]:
             return False
         else:
