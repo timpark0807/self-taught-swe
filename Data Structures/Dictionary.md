@@ -1,4 +1,4 @@
-# Dictionary
+## Dictionary
 Unordered collection of data. 
 
 Holds key : value pairs
