@@ -1,9 +1,9 @@
-# Dictionary
+## Dictionary
 Unordered collection of data. 
 
-Holds key:value pairs
+Holds key : value pairs
 
-Keys must be immutable (string, integer, tuple)
+Keys must be immutable (string, integer, tuples)
 
 ## Initialize
 ```
