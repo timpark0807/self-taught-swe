@@ -20,8 +20,20 @@ def two_sum_optimize(nums, target):
         if target - x in index:
             return [index[target-x], i]
         index[x] = i
-
+    
+def twosum(arr, target):
+    arr.sort()
+    low, high = 0, len(arr) - 1
+    while low < high:
+        if arr[low] + arr[high] == target:
+            return arr[low], arr[high]
+        elif arr[low] + arr[high] < target:
+            low += 1
+        else:
+            high -= 1
+            
+    return False
 
 arr = [3,2,3]
-ans = two_sum_optimize(arr, 6)
+ans = twosum(arr, 6)
 print(ans)
