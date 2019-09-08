@@ -80,6 +80,14 @@ Non Linear Data Structure
 Greedy Method
 Dynamic Programming
 
+## Question Types
+
+String
+- Palindrome
+
+Array
+- 2 Pointers 
+
 
 ## Resources
 ### Courses
