@@ -11,4 +11,4 @@ def pali(s):
     return True
 
 
-print(pali('xanxynax'))
+print(pali('xanxnax'))
