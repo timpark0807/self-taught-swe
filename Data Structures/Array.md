@@ -29,5 +29,7 @@ Good way to save space
 - Brute force first 
 
 - Use 2 pointers
+	- Slow/Fast pointer
+	- Low and High pointer 
 
 - Use a hash table 
