@@ -99,6 +99,7 @@ Array
 - Grokking Algorithms
 - Data Structures & Algorithms in Python
 - Cracking the Coding Interview
+- Elements of Programming Interviews
 - The Slight Edge by Jeff Olsen
 - Mindset by Carol Dweck
 

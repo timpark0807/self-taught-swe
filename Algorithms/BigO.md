@@ -5,6 +5,8 @@ Specifically, Big O gives the upper limit, or worst case scenario, for how long 
 ## What is an Algorithm?
 An algorithm is a set of instructions to find the solution to a problem. 
 
+We need to choose the correct data structure for our algorith in order for the algorithm to be efficient.
+
 ## Benefits of Big O
 - Ignores differences in hardware, programming language, and other external factors that effect run time. 
 - Allows us to explain how algorithms behave as the input grows larger
