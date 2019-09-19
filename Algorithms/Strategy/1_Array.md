@@ -1,29 +1,29 @@
 # Leetcode Strategy : Arrays
 
-## 0. Clarify
-	- Are we modifying the array in place?
-	- What are we returning? The array, index, value, nothing?
-	- Does the order of the values inside the array matter? 
-		- No? Let's consider sorting.
-	- What if the array is empty?
-	- If string: How should we handle Upper/Lower, spaces, and punctuation?
+### 0. Clarify
+- Are we modifying the array in place?
+- What are we returning? The array, index, value, nothing?
+- Does the order of the values inside the array matter? 
+	- No? Let's consider sorting.
+- What if the array is empty?
+- If string: How should we handle Upper/Lower, spaces, and punctuation?
 
-## 1. Derive the Brute Force solution
-	- Often times this involves using nested for loops giving us O(n^2)
+### 1. Derive the Brute Force solution
+- Often times this involves using nested for loops giving us O(n^2)
 
-## Assess a time/space tradeoff	
-	- Can we make the algorithm faster by introducing an auxiliary data structure?
-		- Think Hash tables
-	- Can we make the algorithm use one pass?
-		- Think 2 Pointers
+### 2. Assess a time/space tradeoff	
+- Can we make the algorithm faster by introducing an auxiliary data structure?
+	- Think Hash tables
+- Can we make the algorithm use one pass?
+	- Think 2 Pointers
 
-## 3. Test/Edge cases
-	- Test a normal case
-	- Test an empty array
-	- Test an array length 1 
+### 3. Test/Edge cases
+- Test a normal case
+- Test an empty array
+- Test an array length 1 
 
-## Misc. Common Techniques
-	- Divide problems into subproblems
+### Misc. Common Techniques
+- Divide problems into subproblems
 
 # Example 
 As an example, I will be going over the strategy used to solve the Two Sum array problem.
