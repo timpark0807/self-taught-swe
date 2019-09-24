@@ -1,5 +1,5 @@
 # So You Want To Be a Software Engineer? (with Python)
-From Programming Noob to Software Engineer.
+From Programming Noob to Software Engineer!
 
 ## Syllabus
 - Introduction
