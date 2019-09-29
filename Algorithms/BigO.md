@@ -86,7 +86,11 @@ For sequentials statements (such as if, else), the complexity classes are added.
 
 For repeating statements (such as loops), the complexity classes are multiplied. 
 
+### Interview
 
+Walk through the time complexities from highest to lowest.
+
+SHOWCASE your knowledge.
 
 
 
