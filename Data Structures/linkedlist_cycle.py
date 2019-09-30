@@ -3,12 +3,12 @@ class ListNode:
         self.data = data
         self.next = None 
 
-def cycle(self, root):
+def cycle(root):
     slow = root
     fast = root.next
 
     while fast:
-        if slow.data = fast.data:
+        if slow.data == fast.data:
             return True
         else:
             slow = slow.next
