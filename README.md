@@ -29,12 +29,21 @@ All concepts, courses, and books listed in this README have been personally lear
 1. Linear 
     - Arrays
     - Linked Lists
+	-> Reverse a Linked List
+	-> Linked List Palindrome
+	-> Cycle Detection
     - Stacks
+	-> Max/Min Stack
+	-> Using stacks for DFS
     - Queues
 
 2. Non Linear
     - Heaps
+	- Top K elements -> using heapq
     - Trees
+	- Searches
+	- Minimum depth of Tree
+	- Binary tree symmetric
     - Graphs 
 
 ## Algorithms

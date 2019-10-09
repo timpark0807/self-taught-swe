@@ -10,6 +10,6 @@ def cake_thief(cake_tuples, capacity):
         bag[bag_capacity] = curr_max
     return bag[-1]
 
-ans = cake_thief([(1,3), (2,7), (3,8)], 3)
+ans = cake_thief([(2, 3), (3, 6), (5, 1), (6, 1), (7, 1), (8, 1)], 7)
 print(ans)
     

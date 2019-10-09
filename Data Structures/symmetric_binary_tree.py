@@ -5,7 +5,32 @@ class newNode:
         self.right = None
 
 def symmetry(root):
+    """
+         1
+       /   \
+      2     2
+     / \   / \
+    3   4 4   3
 
+    Using a queue.
+    
+    Set left and right nodes to represent the side of the tree
+    
+    check that
+        1. left.left == right.right
+        2. left.right == right.right
+
+    return False when
+        1. either left or right do not have a node
+        2. data in left or right are unequal
+
+    queue: 
+    (2) <- (2) <- (3) <- (3) <- (4) <- (4)
+    
+    1. root.left, root.right
+    2. root.left.left, root.right.right
+    3. root.left.right, root.right.left
+    """
     if root is None:
          return False
         
@@ -41,7 +66,7 @@ if __name__ == '__main__':
     root = newNode(1)  
     root.left = newNode(2)  
     root.right = newNode(2)  
-    root.left.left = newNode(5)  
+    root.left.left = newNode(3)  
     root.left.right = newNode(4)  
     root.right.left = newNode(4)  
     root.right.right = newNode(3)
