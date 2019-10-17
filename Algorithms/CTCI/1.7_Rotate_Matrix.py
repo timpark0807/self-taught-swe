@@ -15,8 +15,6 @@ def printMatrix(arr):
     for i in range(len(arr)): 
         for j in range(len(arr)): 
             print(str(arr[i][j]), end =" ") 
-        print()
-
 
 arr = [ [10, 11, 12, 13], 
         [14, 15, 16, 17], 

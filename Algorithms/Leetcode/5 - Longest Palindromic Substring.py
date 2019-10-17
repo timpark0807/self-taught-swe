@@ -4,6 +4,13 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
+        if type(s) != str:
+            return ''
+        elif len(s) == 0:
+            return ''
+        elif len(s) == 1:
+            return s
+
         res = "" 
         for i in range(len(s)):
             odd = self.expand(s, i, i)

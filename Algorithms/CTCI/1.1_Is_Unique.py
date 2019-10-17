@@ -1,10 +1,12 @@
+import unittest
+
 def is_unique(string):
     if type(string) != str:
         return False
  
     string = string.lower()
-    
     freq = {}
+    
     for letter in string:
         if letter in freq:
             return False
@@ -27,8 +29,17 @@ def is_unique_followup(string):
 
     return True
 
+class TestSolution(unittest.TestCase):
     
+    def test_unique_string(self):
+        unique_string = 'subway'
+        answer = is_unique_followup(unique_string)
+        self.assertTrue(answer)
 
-string = 'suBway'
-ans = is_unique_followup(string)
-print(ans)
+    def test_non_unique_string(self):
+        non_unique_string = 'subways'
+        answer = is_unique_followup(non_unique_string)
+        self.assertFalse(answer)        
+
+if __name__ == '__main__':
+    unittest.main()

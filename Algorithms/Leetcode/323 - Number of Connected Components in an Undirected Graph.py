@@ -1,5 +1,3 @@
-import collections
-
 class Solution(object):
     def countComponents(self, n, edges):
 
@@ -15,6 +13,7 @@ class Solution(object):
                 graph[y].append(x)
             else:
                 graph[y] = [x]
+
 
         def dfs(node, seen):
             seen.add(node)
