@@ -2,7 +2,8 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.left = None
-        self.right = None 
+        self.right = None
+        
 def min_depth(root):
 
     queue = [{'node':root, 'depth':1}]
@@ -18,7 +19,6 @@ def min_depth(root):
             
         if current.left is None and current.right is None:
             return depth
-
 
 root = Node(1) 
 root.left = Node(2) 
