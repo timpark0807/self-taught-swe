@@ -27,3 +27,4 @@ print(head, head.next, head.next.next)
 # head
 # 
 # ListNode(10)  ->  ListNode(20)  ->  ListNode(30)  ->  ListNode(20)  ->   None
+#
