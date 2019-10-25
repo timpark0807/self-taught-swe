@@ -19,17 +19,6 @@ class Stack:
                 self.s2.append(temp)
         return self.s2
 
-    def test(self):     
-        while s1 != []:
-            self.s2.append(self.s1.pop())
-            if self.s1[-1] < self.s2[-1]:
-                temp = self.s1.pop()
-                self.s1.append(s2.pop())
-                self.s2.append(temp)
-
-        while s2 != []:
-            self.s1.append(self.s2.pop)
-
 class TestSolution(unittest.TestCase):
     def test_valid(self):
         s = Stack()

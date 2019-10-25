@@ -20,7 +20,7 @@ def path_dfs(node1, node2, graph):
     stack = [node1]
     visited = [node1]
     
-    while stack:
+    while stack:git co
         current_node = stack.pop()
         for child in graph.get(current_node, []):
             if child == node2:
