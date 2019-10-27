@@ -13,14 +13,15 @@ def loop_detection(root):
         if slow == fast:
             break
         
-    print(slow.data)
     slow = root
 
-    while slow.data != fast.data:
+    while slow.next != fast.next:
         slow = slow.next
         fast = fast.next
-        
-    return slow.data
+
+    fast.next = None
+    
+    return root
 
 if __name__ == '__main__':
     head = Node(7)
@@ -38,4 +39,8 @@ if __name__ == '__main__':
 
     answer = loop_detection(head)
 
-    print(answer)
+    print(answer.data,
+          answer.next.data,
+          answer.next.next.data,
+          answer.next.next.next.data,
+          answer.next.next.next.next)
