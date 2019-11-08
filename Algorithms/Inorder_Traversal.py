@@ -22,7 +22,20 @@ class Solution:
                 output.append(current.data)
                 current = current.right
                 
-        return output 
+        return output
+
+    def r_inorderTraversal(self, root):
+        output = []
+        self.helper(root, output)
+        return output
+    
+    def helper(self, root, output):
+        if root.left:
+            self.helper(root.left, output)
+        output.append(root)
+        if root.right:
+            self.helper(root.right, output)
+
         
 class TestSolution(unittest.TestCase):
     def setUp(self):

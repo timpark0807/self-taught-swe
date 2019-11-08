@@ -7,8 +7,6 @@ class Solution:
 
         stack = [src]
         seen = set([src])
-        # MISTAKE that i've been running into
-        # set takes an argument of an iterable
         backtrack = {src: None}
         output = []
 
@@ -20,7 +18,6 @@ class Solution:
                     output.append(current)
                     current = backtrack[current]
 
-                # Mistake here, when return output.reverse() gives us None
                 return output[::-1]
             
             for neighbor in adj_list[current]:
