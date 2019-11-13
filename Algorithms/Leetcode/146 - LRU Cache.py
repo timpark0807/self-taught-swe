@@ -60,8 +60,16 @@ class LRUCache:
 
             self.size -= 1
             
+        if key in self.d:
+            
+            new_node = self.d[key]
+            new_node.data = (key, value)
+            new_node.prev.next = new_node.next
+            new_node.next.prev = new_node.prev
+
+        else:
         # Insert a node to the beginning of the list
-        new_node = Node((key, value))
+            new_node = Node((key, value))
 
         temp = self.head.next    
         self.head.next = new_node
