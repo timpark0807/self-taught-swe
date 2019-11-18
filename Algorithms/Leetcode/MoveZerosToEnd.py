@@ -1,14 +1,14 @@
 def moveZerosToEnd(arr):
-    boundary, current = 0, 0
+    i, j = 0, 0
 
-    while current < len(arr):
-        if arr[boundary] == 0 and arr[current] != 0:
-            arr[boundary], arr[current] = arr[current], arr[boundary]
+    while j < len(arr):
+        if arr[i] == 0 and arr[j] != 0:
+            arr[i], arr[j] = arr[j], arr[i]
 
-        if arr[boundary] != 0:
-            boundary += 1
+        if arr[i] != 0:
+            i += 1
 
-        current += 1
+        j += 1
 
     return arr
 
