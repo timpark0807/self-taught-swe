@@ -1,5 +1,3 @@
-import unittest
-
 class Node:
     def __init__(self, val):
         self.val = val
@@ -10,16 +8,20 @@ class Node:
 
 class LinkedList:
     """
-    Implementation of a singly Linked List.
+    Class representation of a singly Linked List.
 
-    Provides the following methods in the associated time complexity:
+    We initialize this linked list with a head node.
     
-    search   :  O(n)
-    insert   :  O(1)
-    delete   :  O(1)
-    reverse  :  O(n)
-    is_cycle :  O(n)
-    get_mid  :  O(n)
+    +----------------+------+-------+
+    |   Operation    | Time | Space |
+    +----------------+------+-------+
+    | Search         | O(n) |  O(1) | 
+    | Insert         | O(1) |  O(1) |
+    | Delete         | O(1) |  O(1) |
+    | Reverse        | O(n) |  O(1) | 
+    | Is Cycle?      | O(n) |  O(1) |
+    | Get Mid Node   | O(n) |  O(1) |
+    +----------------+------+-------+
     """
     
     def __init__(self, head):
@@ -35,10 +37,11 @@ class LinkedList:
     
     def search(self, val):
         """
-        Input  : Integer
-        Output : Bool
+        Input  : int
+        Output : boolean
         
-        Search by Key.
+        Description:
+            - Search a node by value.
         """
         current = self.head
         while current:
@@ -49,10 +52,11 @@ class LinkedList:
 
     def insert(self, val):
         """
-        Input  : Integer
+        Input  : int
         Output : None
         
-        Insert a new Node object to the end of the Linked List. 
+        Description:
+            - Insert a new Node object to the end of the Linked List. 
         """
         current = self.tail
         current.next = Node(val)
@@ -64,9 +68,10 @@ class LinkedList:
         Input  : Node
         Output : None
 
-        Delete a node by reference. If node is tail, deletion takes O(n).  
+        Description:
+            - Delete a node by reference.
+            - If the node to delete is the tail, deletion takes O(n).  
         """
-
         # Check if node is head
         if node_to_delete == self.head:
             self.head = self.head.next
@@ -83,17 +88,20 @@ class LinkedList:
             temp = node_to_delete
             temp.val = temp.next.val
             temp.next = temp.next.next
+            
         self.size -= 1
 
     def _traverse(self):
         """
         Input  : None
-        Output : String
+        Output : str
 
-        Helper method for __str__ method. 
-        Iterate's through nodes in linked list and returns a string in format:
-
-        "0 -> 1 -> 2 -> 3 -> None" 
+        Description:
+            - Helper method for __str__ method. 
+            - String representation of values in linked list
+            
+        Example:
+            "0 -> 1 -> 2 -> 3 -> None" 
         """
         current = self.head
         temp = []
@@ -108,9 +116,10 @@ class LinkedList:
     def is_cycle(self):
         """
         Input  : None
-        Output : Bool
+        Output : boolean
 
-        Uses Floyd's algorithm to detect if there is a cycle in the Linked List.
+        Description:
+            - Uses Floyd's algorithm to detect if there is a cycle in the Linked List.
         """
         slow = self.head
         fast = self.head
@@ -128,8 +137,9 @@ class LinkedList:
         Input  : None
         Output : Node
 
-        Reverses the linked list in place and returns the new head.
-        ** WILL DESTROY ORIGINAL LIST **
+        Description:
+            - Reverses the linked list in place and returns the new head.
+            - THE ORIGINAL LIST WILL BE MODIFIED
         """
         self.tail = self.head
         prev = None
@@ -147,7 +157,8 @@ class LinkedList:
         Input  : None
         Output : Node
 
-        Returns the mid point of the linked list.
+        Description:
+            - Returns the mid point of the linked list.
         """   
         slow = self.head
         fast = self.head
