@@ -1,17 +1,7 @@
-# So You Want To Be a Software Engineer? (with Python)
-From Programming Noob to Software Engineer!
-
-## Syllabus
-- Introduction
-- Important Concepts
-- Data Structures
-- Algorithms
-- Roadmap 
-- Resources
+# Self Taught Progression
 
 ## Introduction
-This project is the result of thousands of Google searches on self-taught programming.
-I began noticing trends on topics ranging from best courses and books, to must know concepts and important practices.
+This repository is a collection of knowledge gathered during my journey to become a self-taught software engineer. 
 I compiled my findings into this repository in order to track personal progress and showcase skillset to potential employers.
 All concepts, courses, and books listed in this README have been personally learned, completed, or read.
 
@@ -22,33 +12,20 @@ All concepts, courses, and books listed in this README have been personally lear
 - Testing
 - Web Framework (Model/View/Controller)
 - Big O
-	*A Gentle Introduction to Algorithm Complexity Analysis
-	* http://discrete.gr/complexity/
 
 ## Data Structures
 1. Linear 
     - Arrays
     - Linked Lists
-	-> Reverse a Linked List
-	-> Linked List Palindrome
-	-> Cycle Detection
     - Stacks
-	-> Max/Min Stack
-	-> Using stacks for DFS
     - Queues
 
 2. Non Linear
     - Heaps
-	- Top K elements -> using heapq
     - Trees
-	- Searches
-	- Minimum depth of Tree
-	- Binary tree symmetric
     - Graphs 
 
 ## Algorithms
-Leetcode.com 
-
 ## Knowledge Road Map
 __Step 1.__
 Alrgorithmic Analysis
@@ -85,19 +62,6 @@ Non Linear Data Structure
 	- Tree Traversal
 	- BFS/DFS 
 
-
-Greedy Method
-Dynamic Programming
-
-## Question Types
-
-String
-- Palindrome
-
-Array
-- 2 Pointers 
-
-
 ## Resources
 ### Courses
 - MIT 6.00.1 - Introduction to Computer Science
@@ -119,4 +83,3 @@ Array
 - reddit.com/r/cscareerquestions
 - youtube.com/sentdex
 - youtube.com/coreyschafer
-- youtube.com/jomatech
