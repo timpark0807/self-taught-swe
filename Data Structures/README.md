@@ -1,16 +1,17 @@
-# self-taught-swe/Data Structures
+# Data Structures
 
 This repository showcases my implementation of the following Data Structures in Python.
 
 Completed:
 - Linked List
 - Graph 
+- Binary Tree
 
 TODO:
 - Stack
 - Queue
 - Heap
-- Binary Tree
+
 - Binary Search Tree
 
 

@@ -90,11 +90,6 @@ For repeating statements (such as loops), the complexity classes are multiplied.
 
 Walk through the time complexities from highest to lowest.
 
-SHOWCASE your knowledge.
-
-
-
-
 ## Common Time Complexities
 - O(1) = Constant 
 - O(n) = Linear 

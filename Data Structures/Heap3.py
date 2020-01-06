@@ -1,14 +1,25 @@
 class Heap:
     """
-    Implementation of a Heap Data Structure.
+    Implementation of a Max Heap.
 
+    We initialize this class with an array of integers.
+    If an array is not provided, we initialize with an empty array.
 
-    Pros:
-        - Easy access to the max or min value of the data
+    This object supports the following:
+    +------------------+------+-------+
+    |   Operation      | Time | Space |
+    +------------------+------+-------+
+    | Insert           | O(1) |  O(1) |
+    | Heap Sort        | O(n) |  O(1) |
+    | Traversal - DFS  | O(n) |  O(n) |
+    | Traversal - BFS  | O(n) |  O(n) |
+    | Topoligcal Sort  | O(n) |  O(n) |
+    | Is Cycle?        | O(n) |  O(n) |  
+    +------------------+------+-------+
     """
     
     def __init__(self, heap=[]):
-        self.heap=heap
+        self.heap = heap
         self.size = len(self.heap)
    
     def build_max_heapify(self):
@@ -20,7 +31,6 @@ class Heap:
         """
         for index in reversed(range(0, self.size // 2)):
             self.max_heapify(index)
-
             
     def max_heapify(self, index):
         """
@@ -41,7 +51,7 @@ class Heap:
 
     def _swap(self, i, j):
         """
-        Internal helper function to swap values of two indexes.
+        Internal helper function to swap values at two indices.
         """
         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
         return
@@ -64,7 +74,7 @@ class Heap:
                 self._swap(index, (index-1)//2)
             index = (index-1)//2
 
-    def remove(self):
+    def pop_max(self):
         """
         Allows us to remove the max value from the max heap.
         Swap the last value of the array to the root index, and bubble down into correct position.
@@ -100,5 +110,5 @@ if __name__ == '__main__':
     heap.build_max_heapify()
     heap.insert(55)
     print(heap.heap)
-    print(heap.remove())
+    print(heap.pop_max())
     print(heap.heap)
