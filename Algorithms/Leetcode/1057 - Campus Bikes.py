@@ -60,8 +60,10 @@ class Solution(object):
                    
         answer = [ 0 , 2  , 1  ]
                    0   1   2
+
+        Time : MN + MN log MN 
         """
-        heap = []
+
         distances = []
         # Add all combinations to a heap 
         for worker_num, worker in enumerate(workers):
