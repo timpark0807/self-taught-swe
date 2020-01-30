@@ -1,9 +1,36 @@
+import collections
+
 class Solution:
 
     def __init__(self):
         pass
     
     def findRedundantConnection(self, edges):
+        adj_list = collections.defaultdict(list)
+        retval = None
+        n = len(edges)
+        
+        for x, y in edges:
+            if self.dfs(adj_list, -1, x, y):
+                retval = [x, y]
+            else:
+                adj_list[x].append(y)
+                adj_list[y].append(x)
+            
+        return retval
+
+    def dfs(self, adj_list, parent, u, v):
+        if u == v:
+            return True
+        for neighbor in adj_list[u]:
+            if parent == neighbor:
+                continue
+            return self.dfs(adj_list, u, neighbor, v)
+        return False
+
+
+
+    def unionfind(self, edges):
         parent = [-1] * (len(edges) + 1)
         for x, y in edges:
             if not self.union(parent, x, y):

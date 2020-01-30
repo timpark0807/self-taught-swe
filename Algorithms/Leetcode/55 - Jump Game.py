@@ -13,7 +13,7 @@ class Solution(object):
         if curr_index == len(nums) - 1:
             return True
         
-        for jump in range(1, nums[current_index]+1):
+        for jump in range(1, nums[curr_index]+1):
             if curr_index + jump < len(nums):
                 if self.backtrack(nums, curr_index + jump):
                     return True
