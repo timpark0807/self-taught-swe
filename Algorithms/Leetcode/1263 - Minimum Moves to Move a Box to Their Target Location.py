@@ -1,4 +1,5 @@
 import collections
+import heapq
 
 class Solution(object):
     def minPushBox(self, grid):
@@ -62,7 +63,7 @@ class Solution(object):
     
     
     def bfs(self, grid, b_coord, s_coord, t_coord):
-        queue = collections.deque([(b_coord, s_coord, 0)])
+        queue = [(0, b_coord, s_coord, 0)]
         seen = set([(b_coord, s_coord)]) 
         
         # new position : push position 
@@ -72,33 +73,37 @@ class Solution(object):
                       (0,-1) : (0 ,1)}   
         
         while queue: 
-            (box_row, box_col), (person_row, person_col), curr_push = queue.popleft() 
+            dist, (box_row, box_col), (person_row, person_col), curr_push = heapq.heappop(queue)
             if (box_row, box_col) == t_coord:
                 return curr_push 
 
             for new_pos, push_pos in self.moves.items():
                 new_row, new_col = box_row + new_pos[0], box_col + new_pos[1]
                 push_row, push_col = box_row + push_pos[0], box_col + push_pos[1]
-                if not self.is_path(grid, person_row, person_col, push_row, push_col, box_row, box_col):
-                    continue 
-                if self.is_valid(grid, new_row, new_col, push_row, push_col) and ((box_row, box_col), (new_row, new_col)) not in seen:
-                    queue.append(((new_row, new_col), (box_row, box_col), curr_push+1))
+                if self.is_valid(grid, new_row, new_col, push_row, push_col) and ((box_row, box_col), (new_row, new_col)) not in seen and self.is_path(grid, person_row, person_col, push_row, push_col, box_row, box_col):
+                    new_dist = self.get_manhattan(new_row, new_col, t_coord) 
+                    heapq.heappush(queue, (new_dist + curr_push + 1, (new_row, new_col), (box_row, box_col), curr_push+1))
                     seen.add(((box_row, box_col), (person_row, person_col)))
     
         return -1
-    
+
+    def get_manhattan(self, new_row, new_col, t_coord):
+        return abs(new_row - t_coord[0]) + abs(new_col - t_coord[1])
+
+        
     def is_path(self, grid, sr, sc, tr, tc, br, bc):
-        stack = [(sr, sc)]
+        stack = [(0, sr, sc)]
         seen = set()
         while stack:
-            curr_row, curr_col = stack.pop(0)
+            curr_dist, curr_row, curr_col = heapq.heappop(stack)
             if (curr_row, curr_col) == (tr, tc):
                 return True
             for move in self.moves.keys():
                 new_row, new_col = curr_row + move[0], curr_col + move[1]
                 if self.inbound(grid, new_row, new_col) and (new_row, new_col) not in seen and (new_row, new_col) != (br, bc):
+                    new_dist = self.get_manhattan(new_row, new_col, (tr, tc))
                     seen.add((new_row, new_col))
-                    stack.append((new_row, new_col))
+                    stack.append((curr_dist + new_dist + 1, new_row, new_col))
         return False
         
     def is_valid(self, grid, nr, nc, pr, pc):
@@ -116,21 +121,12 @@ class Solution(object):
                 elif grid[row][col] == 'B':
                     b_coord = (row, col)
                 elif grid[row][col] == 'S':
-                    s_coord = (row, col)         
+                    s_coord = (row, col)
+            if t_coord and b_coord and s_coord:
+                break
         return t_coord, s_coord, b_coord
                     
-                    
-grid = [["#",".",".","#","#","#","#","#"],
-        ["#",".",".","T","#",".",".","#"],
-        ["#",".",".",".","#","B",".","#"],
-        ["#",".",".",".",".",".",".","#"],
-        ["#",".",".",".","#",".","S","#"],
-        ["#",".",".","#","#","#","#","#"]]
-s= Solution()
-print(s.minPushBox(grid))
 
-grid = [ ["T","#","#","#"],
-         [".",".","B","."],
-         [".","#","#","."],
-         [".",".",".","S"]]
-print(s.minPushBox(grid))
+s = Solution()
+grid = [["#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#"],["#",".",".",".",".",".",".",".",".",".",".",".","#","#","#","#","#","#","#","#"],["#",".",".",".","#","#",".","#","#","#","#",".","#","#","#",".","#","#","T","#"],["#",".",".",".",".",".",".","#",".","#",".",".","#","#","#",".","#","#",".","#"],["#",".",".",".","#",".",".",".",".",".",".",".","#","#","#",".","#","#",".","#"],["#",".","#",".",".",".",".",".",".",".",".",".","#","#","#",".","#","#",".","#"],["#",".","#",".","#","#","#","#","#","#","#",".","#","#","#",".","#","#",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".","B",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",".",".","#"],["#",".",".",".",".",".",".",".","S",".",".",".",".",".",".",".","#",".",".","#"],["#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#"]]
+s.minPushBox(grid)
