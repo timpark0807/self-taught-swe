@@ -13,54 +13,19 @@ All concepts, courses, and books listed in this README have been personally lear
 - Web Framework (Model/View/Controller)
 - Big O
 
-## Data Structures
-1. Linear 
-    - Arrays
-    - Linked Lists
-    - Stacks
-    - Queues
-
-2. Non Linear
-    - Heaps
-    - Trees
-    - Graphs 
-
-## Algorithms
-## Knowledge Road Map
+## DS&A Road Map
 __Step 1.__
 Alrgorithmic Analysis
 - Big O
 
 __Step 2.__
-Basic Sorting and Searching Algorithm
-- Bubble Sort
-- Insertion Sort
-- Selection Sort
-- Linear Search
-- Binary Search
+Sorting and Binary Search
 
 __Step 3.__
 Linear Data Structures
-- Array
-- Single Linked List
-- Double Linked List
-- Stack
-- Queue
 
 __Step 4.__
-Divide and Conquer Sorting
-- Merge Sort
-- Quick Sort
-- Binary Search
-
-__Step 5.__
-Non Linear Data Structure
-- Heaps
-- Binary Tree
-- Binary Search Tree 
-	- Height of a Tree
-	- Tree Traversal
-	- BFS/DFS 
+Graphs/Trees
 
 ## Resources
 ### Courses
