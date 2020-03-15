@@ -51,6 +51,8 @@ def valid_binary_tree(arr):
     for parent, child in arr:
         if parent not in adj_list:
             adj_list[parent] = []
+        if child not in adj_list:
+            adj_list[child] = []
         if parent not in indegrees:
             indegrees[parent] = 0 
         if child not in indegrees:
@@ -58,20 +60,21 @@ def valid_binary_tree(arr):
 
         adj_list[parent].append(child)
         indegrees[child] += 1 
+        indegrees[parent] += 1
 
         if len(adj_list[parent]) == 3 or indegrees[child] == 2:
             return False
 
-    root = [node for node, value in indegrees.items() if value == 0]
+    root = [node for node, value in indegrees.items() if value == 1]
     
     if len(root) > 1:
         return False
-     
+    print(root)
     return not is_cycle(adj_list, indegrees)  
 
 def is_cycle(adj_list, indegrees):
 
-    zero_nodes = [node for node, value in indegrees.items() if value == 0]
+    zero_nodes = [node for node, value in indegrees.items() if value == 1]
     topsort = []
     
     while zero_nodes:
@@ -85,17 +88,20 @@ def is_cycle(adj_list, indegrees):
     return len(zero_nodes) == len(indegrees)
 
 
-arr = [(1,2),(2,3),(3,4)]
-print(valid_binary_tree(arr))
+##arr = [(1,2),(2,3),(3,4)]
+##print(valid_binary_tree(arr))
+##
+##arr = [(1,2), (1,3), (1,4)]
+##print(valid_binary_tree(arr))
+##
+##arr = [{1,2},{2,3},{2,4},{1,5}]
+##print(valid_binary_tree(arr))
+##
+##arr = [{1,2},{2,3},{4,5}]
+##print(valid_binary_tree(arr))
+##
+##arr = [{1,2},{2,1}]
+##print(valid_binary_tree(arr))
 
-arr = [(1,2), (1,3), (1,4)]
-print(valid_binary_tree(arr))
-
-arr = [{1,2},{2,3},{2,4},{1,5}]
-print(valid_binary_tree(arr))
-
-arr = [{1,2},{2,3},{4,5}]
-print(valid_binary_tree(arr))
-
-arr = [{1,2},{2,1}]
+arr = [{1,2},{2,4},{2,3}]
 print(valid_binary_tree(arr))
