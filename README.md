@@ -2,14 +2,14 @@
 
 A collection of Data Structures & Algorithms knowledge gathered as a self-taught programmer.
 
+If you are a hiring manager, these are the steps I took to achieve mastery of DS&A. If you are an aspiring programmer, use this as a road map to improving your knowledge of DS&A.
+
 ## Background
 As an aspiring self-taught software engineer, I have spent many nights Googling what it takes to become a great software engineer. A consistent, reoccurring answer was Data Structures & Algorithms. 
 
 After spending 6 months studying DS&A and solving 550+ LC questions (leetcode.com/teampark), I firmly agree that DS&A knowledge has been THE most important factor in gaining coding confidence.
 
 This repository contains solutions to Leetcode questions and fundamental Data Structures implemented from scratch. This repository also contains a roadmap to going from absolutely ZERO knowledge (not knowing what an array was) to ranking in the top 10% of Leetcode contest participants. 
-
-If you are a hiring manager, hello and welcome to my journey. If you are an aspiring programmer, use this as a road map to improving your knowledge of Data Structures & Algorithms.
 
 # Road Map
 
@@ -87,4 +87,10 @@ A few examples below:
 **Backtracking:** Find All, Generate All 
 
 ## Phase 5: Practice
-There is no shortcut. The last step is practice. 
+There is no shortcut. Practice makes perfect. 
+
+www.Leetcode.com/teampark 
+
+![Imgur](https://i.imgur.com/X7LkbmP.png)
+
+![Imgur](https://i.imgur.com/6YEdxwd.png)
