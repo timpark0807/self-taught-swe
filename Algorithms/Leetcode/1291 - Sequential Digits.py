@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: List[int]
         """
         answer = []
-        
         self.backtrack(low, high, 0, answer, -1)
         answer.sort() 
         return answer
