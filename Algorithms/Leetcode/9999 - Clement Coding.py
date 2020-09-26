@@ -6,6 +6,12 @@ def solve(phoneNumber, words):
     @param1 phoneNumber : str
     @param2 words : str[]
     @return answer : str[]
+    @bigO
+        time : O(nm)
+        space: O(nm)
+
+        where n == len(words)
+        and   m == avg len(word) in words 
     """
     
     mapping = {'a':2, 'b':2, 'c':2, 'd':3, 'e':3, 'f':3,
@@ -22,7 +28,7 @@ def solve(phoneNumber, words):
             currMapping.append(str(mapping[letter]))
             
         serial = ''.join(currMapping)
-        if len(serial) <= len(phoneNumber) and serial in phoneNumber: 
+        if serial in phoneNumber: 
             answer.append(word)
             
     answer.sort()
