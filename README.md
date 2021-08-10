@@ -2,8 +2,6 @@
 
 A collection of Data Structures & Algorithms knowledge gathered as a self-taught programmer.
 
-If you are a hiring manager, these are the steps I took to achieve mastery of DS&A. If you are an aspiring programmer, use this as a road map to improving your knowledge of DS&A.
-
 ## Background
 After spending 6 months studying DS&A and solving 550+ LC questions (leetcode.com/teampark), I can say that DS&A knowledge has been THE most important factor in gaining coding confidence.
 
